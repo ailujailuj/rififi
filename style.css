@@ -1,0 +1,526 @@
+/* ---- configuracoes gerais ---- */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	--azul-petroleo: #013930;
+	--verde: #657A2E;
+	--cinza-azulado: #d2d2d7;
+	--cinza-escuro: #626262;
+	--branco-amarelado: #fffcf5;
+	--verde-acinzentado: #7b9971;
+	--bg-principal: #fdfeff;
+	--bg-secundario: #e4f0d3;
+	--highlight-soft: #e0d1c8;
+	--highlight-medium: #c3706c;
+	--highlight-dark: #953631;
+	--quase-preto: #1c1c1c;
+
+    --cinza-escuro: #2f2f2f;
+
+
+    --orangered: #ff4500;
+
+    
+}
+
+html, .body {
+	background-color: var(--bg-principal);
+	font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+	text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+
+input, textarea, button {
+	font-family: inherit;
+	font-size: inherit;
+    border: 0;
+}
+
+.header {
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+
+.header-list {
+    text-align: center;
+}
+
+.header-list-item {
+    color: #fff;
+    padding: 1em;
+    border-bottom: 1px solid darkorange;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header-list-item:last-child {
+    border-bottom: none;
+}
+
+.header-login-btn {
+    padding: 0.3em 0.75em;
+    background-color: var(--orangered);
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-login-btn:hover,
+.header-login-btn:focus {
+    color: #000;
+    background-color: white;
+}
+
+.header-nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    background: black;
+    right: 0;
+    height: calc(100vh - 100px);
+    width: 100%;
+    z-index: 3;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+
+}
+
+.header-searchbar {
+    background-color: #fff;
+    
+}
+
+.header-searchbar-input {
+    border: 0;
+    padding: 0.4em;
+}
+
+
+.header-searchbar-input:focus,
+.header-searchbar-input:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0.5em var(--cinza-escuro);
+}
+
+.header-searchbar-search {
+    padding: 0 0.5em;
+    cursor: pointer;
+    color: #000;
+}
+
+.menu-btn {
+    border: none;
+    background: transparent;
+    color: var(--orangered);
+    font-size: 2em;
+}
+
+
+.menu-btn-fechar {
+    align-self: flex-end;
+}
+
+
+@media (min-width: 662px) {
+    .header-nav {
+        width: 60%;
+    }
+}
+
+
+@media (min-width: 974px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .header-nav {
+        width: auto;
+        position: static;
+        top: 0;
+        display: flex;
+        flex-direction: row; 
+        height: 100%;
+        padding: 0;
+
+    }
+    
+    .header-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0.5em;
+    }
+    
+    .header-list-item {
+        border: none;
+        cursor: pointer;
+    }
+
+    .header-list-item:hover,
+    .header-list-item:focus {
+        border-bottom: 1px solid var(--orangered);
+    }
+
+    .header-searchbar {
+        margin: 0;
+    }
+}
+
+
+
+.welcome-section {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("img/editorial-4-1-millidollars.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.welcome-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--orangered);
+}
+
+.welcome-vermais {
+    padding: 0.5em 1.5em;
+    background-color: white;
+    color: #000;
+    box-shadow: 0.3em 0.3em var(--orangered);
+    margin-top: 1em;
+    align-self: flex-end;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.welcome-vermais:hover,
+.welcome-vermais:focus {
+    background-color: #000;
+    color: var(--orangered);
+}
+
+.welcome-vermais:active {
+    transform: translateX(0.3em) translateY(0.3em);
+    box-shadow: none;
+}
+
+@media (min-width: 900px) {
+    
+    .welcome-vermais {
+        align-self: flex-start;
+    }
+}
+
+
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .section {
+	width: 100%;
+	margin: 2em auto;
+    max-width: 940px;
+    padding: 1.5em;
+}
+
+.produtos-row-div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.produtos-row-gap {
+    gap: 1em 0.5em;
+}
+
+.produtos-card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.produtos-card:hover,
+.produtos-card:focus {
+    cursor: pointer;
+}
+
+.produtos-title {
+    font-size: 2em;
+    padding: 1em 0 2em 0;
+    font-weight: 700;
+    border-top: 1px solid #2f2f2f;
+}
+
+
+.produtos-card-img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+	object-position: center;
+}
+
+.flexbox-container {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    padding: 1em 0 0.5em 0;
+}
+
+.card-preco {
+    padding-bottom: 0.5em;
+}
+
+.produtos-vermais-btn {
+    padding: 0.3em 0.75em;
+    cursor: pointer;
+}
+
+.produtos-vermais-btn:hover,
+.produtos-vermais-btn:focus {
+    color: var(--orangered);
+    
+}
+
+@media (min-width: 600px) {
+	.section {
+		width: 90%;
+
+	}
+   
+
+}
+
+
+@media (min-width: 729px) {
+    .produtos-row-div {
+        justify-content: space-evenly;
+    }
+
+    .produtos-card {
+        width: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+	.section {
+		width: 100%;
+	}
+
+    .produtos-card {
+        width: 200px;
+    }
+
+}
+
+@media (min-width: 1090px) {
+    .produtos-row-div {
+        justify-content: space-between;
+    }
+}
+
+.produtos-categorias-item {
+    width: 33%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 80%;
+    cursor: pointer;
+
+}
+
+.categorias-vestuario {
+    background-image: url(img/masculino-2-sirio.jpg);
+}
+
+.categorias-acessorios {
+    background-image: url(img/acessorios-1-kevin-laminto.jpg);
+}
+
+.categorias-sale {
+    background-image: url(img/sale-1-mike-von.jpg);
+}
+
+.categoria-title {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1em 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+
+.produtos-categorias-item:hover, 
+.produtos-categorias-item:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-blend-mode: multiply;
+}
+
+@media (min-width: 600px) {
+    .produtos-categorias-item {
+        padding-top: 60%;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .produtos-categorias-item {
+        padding-top: 37%;
+    }
+}
+
+footer {
+	background-color: #c6ccbe;
+	color: #000;
+	padding: 2em;
+}
+
+.footer-flexbox  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+footer .logo {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-menu {
+    min-width: 185px;
+    padding: 1em 0;
+}
+
+
+
+
+.footer-ul li {
+    margin: 1em 0;    
+}
+
+.footer-contato {
+    display: flex;
+    flex-direction: column;
+    text-transform: lowercase;
+    min-width: 323px;
+}
+
+.footer-contato h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.footer-contato-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+.footer-contato-form input,
+.footer-contato-form textarea {
+    margin: 0.5em 0;
+    padding: 0.4em;
+    width: 100%;
+}
+
+.footer-contato-btn {
+    padding: 0.3em 0.75em;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-contato-btn:hover,
+.footer-contato-btn:focus {
+    color: var(--orangered);
+}
+
+.footer-contato-redes {
+    margin: 0 auto;
+}
+
+.redes-sociais {
+    font-size: 1.25rem;
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+.redes-sociais:hover,
+.redes-sociais:focus {
+    color: var(--orangered);
+}
+
+.footer-dev-text {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.footer-msg-enviada {
+    color: white;
+    margin-bottom: 1em;
+    background: #20601f;
+    padding: 0.5em;
+}
+
+@media (min-width: 800px) {
+    footer .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+.box {
+    background-color: #2f2f2f2c;
+}

@@ -1,0 +1,86 @@
+.login-section {
+    padding: 4em 2em;
+    margin: 4em auto;
+    width: 80%;
+    background-color: #2f2f2f2c;
+    max-width: 450px;
+}
+
+.login-section-title {
+    text-align: center;
+    font-size: 1.25rem;
+
+}
+
+.login-form {
+    margin: 2em 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-input {
+    padding: 0.4em;
+    outline: none;
+    margin: 0.4em 0 1em 0;
+}
+
+.login-form-label {
+    margin-top: 1em;
+}
+
+.login-form-btn {
+    padding: 0.5em 0;
+    cursor: pointer;
+    background-color: #c6ccbe;
+    font-weight: 500;
+    position: relative;
+    margin-top: 1em;
+}
+
+.login-form-btn:hover,
+.login-form-btn:focus {
+    color: var(--orangered);
+}
+
+.carregando::before {
+    content: "";
+    display: block;
+    animation: girar 2s linear;
+    border: 6px solid transparent;
+    border-top-color: red;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 15px);
+    margin: 0.5em 0;
+
+
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.erro-login {
+    display: block;
+    color: var(--orangered);
+    margin: 0.5em 0;
+}
+
+.input-invalido-error {
+	border: red 1px solid;
+	box-shadow: 0 0 0.5em var(--cinza-escuro);
+}
+
+.input-invalido-error-msg {
+    color: var(--orangered);
+    font-weight: 200;
+}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>rififi clothing</title>
+		<link href="reset.css" rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+		<link href="style.css" rel="stylesheet">
+        <link href="login.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/7ac8a51c70.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800;900&display=swap"
+			rel="stylesheet">
+	</head>
+
+	<body>
+		<header class="header">
+			<img class="logo" alt="" src="img/rififi-1.png">
+			<button class="menu-btn" id="menu-btn-abrir"><i class="fa-solid fa-bars"></i></button>
+			<nav class="header-nav" id="nav">
+				<button class="menu-btn menu-btn-fechar" id="menu-btn-fechar"><i
+						class="fa-solid fa-xmark"></i></button>
+				<div class="header-searchbar">
+					<input class="header-searchbar-input" type="text" placeholder="buscar produto" aria-label="buscar produto">
+					<span class="header-searchbar-search" href="#"><i class="fa-solid fa-magnifying-glass"></i></span>
+				</div>
+				<ul class="header-list">
+					<li class="header-list-item"><a href="index.html">home</a></li>
+					<li class="header-list-item"><a href="#">vestuário</a></li>
+					<li class="header-list-item"><a href="#">acessórios</a></li>
+					<li class="header-list-item"><a href="#">sale</a></li>
+				</ul>
+				<span><a href="login.html" class="header-login-btn">login</a></span>
+			</nav>
+
+		</header>
+		<main>
+			<div class="overlay" id="overlay"></div>
+            <section class="login-section box">
+                <h2 class="login-section-title">Iniciar sessão</h2>
+                <form class="login-form" id="login-form">
+
+                    <label for="login-email" class="login-form-label">Email</label>
+                    <input class="login-form-input" id="login-email" name="email" type="email" placeholder="Digite seu email" data-tipo="login-input" required>
+					<span data-tipo="login-email-error" class="input-invalido-error-msg"></span>
+
+                    <label for="login-senha" class="login-form-label">Senha</label>
+                    <input class="login-form-input" id="login-senha" name="senha" type="password" placeholder="Digite sua senha" data-tipo="login-input" required>
+					<span data-tipo="login-senha-error" class="input-invalido-error-msg"></span>
+
+                    <button type="submit" class="login-form-btn" id="login-btn">login</button>
+                </form>
+            </section>
+
+			
+
+
+
+
+		</main>
+
+		<footer>
+			<div class="footer-flexbox">
+			<img class="logo" alt="" src="img/rififi-footer.png">
+			<div class="footer-menu">
+				<ul class="footer-ul">
+					<li><a href="#">Quem somos</a></li>
+					<li><a href="#">Política de privacidade</a></li>
+					<li><a href="#">Nossas lojas</a></li>
+					<li><a href="#">Trabalhe conosco</a></li>
+					<li><a href="#">Trocas e devoluções</a></li>
+					<ul>
+					</div>
+					<div class="footer-contato">
+						<h4>Contato</h4>
+						<form class="footer-contato-form">
+							<label>Nome</label>
+							<input type="text">
+							<label>Email</label>
+							<input type="email" placeholder="exemplo@email.com">
+							<label>Mensagem</label>
+							<textarea placeholder="digite sua mensagem"></textarea>
+							<button class="footer-contato-btn" type="submit">enviar</button>
+						</form>
+						<div class="footer-contato-redes">
+							<a class="redes-sociais"><i class="fa-brands fa-twitter"></i></a>
+							<a class="redes-sociais"><i class="fa-brands fa-instagram"></i></a>
+							<a class="redes-sociais"><i class="fa-brands fa-facebook-f"></i></a>
+						</div>
+					</div>
+					</div>
+					<p class="footer-dev-text">Desenvolvido por Julia Lacerda</p>
+					<p class="footer-dev-text">2022</p>
+				</footer>
+				<script src="script.js"></script>
+                <script src="login.js"></script>
+			</body>
+		</html>
