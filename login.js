@@ -31,7 +31,7 @@ for (input of loginInputs) {
 }
 
 const loginAdmin = (campos) => {
-    const admin = "user";
+    const admin = "user@teste.com.br";
     const senha = "222";
 
     if (loginEmailInput.value === admin && loginSenhaInput.value === senha) {
